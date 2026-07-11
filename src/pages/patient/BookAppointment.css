@@ -1,0 +1,234 @@
+/* ── Page ──────────────────────────────────────────────────── */
+.book-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Layout ────────────────────────────────────────────────── */
+.book-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ── Form Card ─────────────────────────────────────────────── */
+.book-form-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-input {
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  border-color: rgba(99, 102, 241, 0.6);
+  background: rgba(99, 102, 241, 0.08);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-input option { background: #1e293b; }
+
+.field-warning {
+  font-size: 12px;
+  color: #fca5a5;
+  margin: 0;
+}
+
+/* ── Available Days Box ────────────────────────────────────── */
+.available-days-box {
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.available-days-title {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 10px;
+}
+
+.available-days-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.day-chip {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: rgba(99, 102, 241, 0.2);
+  color: #c4b5fd;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* ── Submit Button ─────────────────────────────────────────── */
+.btn-book-submit {
+  padding: 14px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-book-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.5);
+}
+
+.btn-book-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Doctor Preview Card ───────────────────────────────────── */
+.doctor-preview-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  position: sticky;
+  top: 90px;
+}
+
+.preview-avatar {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.doctor-preview-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.preview-specialty,
+.preview-dept {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.preview-bio {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 8px 0 0;
+  line-height: 1.5;
+}
+
+.preview-badge {
+  margin-top: 12px;
+  font-size: 12px;
+  padding: 4px 12px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 20px;
+}
+
+/* ── Preview Empty ─────────────────────────────────────────── */
+.preview-empty {
+  color: rgba(255, 255, 255, 0.3);
+  padding: 40px 0;
+}
+
+.preview-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+/* ── Loading ───────────────────────────────────────────────── */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top: 3px solid #6366f1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .book-layout { grid-template-columns: 1fr; }
+  .doctor-preview-card { position: static; }
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
